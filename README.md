@@ -28,13 +28,13 @@ docker build -f container/ubuntu-24.04-cuda-13.2.0-cudnn.Dockerfile -t test-mpi-
 
 ## Running The Test
 
-The Slurm helper script mounts the repository into `/scratch` inside the container and runs `tests/test_mpi4py.py`.
+The helper script mounts the repository into `/scratch` inside the container and runs `tests/test_mpi4py.py`.
 
 Examples:
 
 ```bash
-sbatch scripts/run.sh cpu
-sbatch scripts/run.sh cpu ghcr.io/dingp/test-mpi-images:ubuntu-24.04
-sbatch scripts/run.sh gpu ghcr.io/dingp/test-mpi-images:ubuntu-24.04-cuda-12.8.1
-sbatch scripts/run.sh gpu ghcr.io/dingp/test-mpi-images:ubuntu-24.04-cuda-13.2.0-cudnn
+scripts/run.sh cpu
+scripts/run.sh cpu ghcr.io/dingp/test-mpi-images:ubuntu-24.04
+scripts/run.sh gpu ghcr.io/dingp/test-mpi-images:ubuntu-24.04-cuda-12.8.1
+scripts/run.sh gpu ghcr.io/dingp/test-mpi-images:ubuntu-24.04-cuda-13.2.0-cudnn
 ```
