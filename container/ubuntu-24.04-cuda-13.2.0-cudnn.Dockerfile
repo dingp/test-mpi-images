@@ -96,7 +96,7 @@ RUN git clone --branch v${libfabric_version} --depth 1 https://github.com/ofiwg/
     && rm -rf libfabric
 
 # Install UCX
-ARG UCX_VERSION=1.18.1
+ARG UCX_VERSION=1.20.0
 RUN wget -q https://github.com/openucx/ucx/releases/download/v${UCX_VERSION}/ucx-${UCX_VERSION}.tar.gz \
     && tar xzf ucx-${UCX_VERSION}.tar.gz \
     && cd ucx-${UCX_VERSION} \
