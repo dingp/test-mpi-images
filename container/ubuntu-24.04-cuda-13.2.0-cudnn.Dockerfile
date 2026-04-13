@@ -2,7 +2,7 @@ FROM docker.io/nvidia/cuda:13.2.0-cudnn-devel-ubuntu24.04
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive \
-       apt-get install -y \
+       apt-get install -y --no-install-recommends \
         build-essential \
         ca-certificates \
         pkg-config \
@@ -19,7 +19,6 @@ RUN apt-get update \
         python3-pip \
         python3-venv \
         python3-dev \
-        build-essential \
         gfortran \
         rdma-core \
         numactl \
@@ -34,7 +33,6 @@ RUN apt-get update \
         libcurl4-openssl-dev \
         libjson-c-dev \
         libibverbs-dev \
-        --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install XPMEM
