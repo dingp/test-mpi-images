@@ -109,7 +109,7 @@ RUN wget -q https://github.com/openucx/ucx/releases/download/v${UCX_VERSION}/ucx
     && rm -rf ucx-${UCX_VERSION}.tar.gz ucx-${UCX_VERSION}
 
 # Install mpich
-ARG MPI_VER=4.3.1
+ARG MPI_VER=5.0.0
 RUN wget -q https://www.mpich.org/static/downloads/${MPI_VER}/mpich-${MPI_VER}.tar.gz \
     && tar xf mpich-${MPI_VER}.tar.gz \
     && cd mpich-${MPI_VER} \

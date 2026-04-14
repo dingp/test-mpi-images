@@ -130,4 +130,3 @@ RUN wget -q https://www.mpich.org/static/downloads/${MPI_VER}/mpich-${MPI_VER}.t
 ARG mpi4py=4.1.0
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.8/compat/:/usr/local/cuda-12.8/targets/x86_64-linux/lib/stubs
 RUN MPICC="mpicc -shared" pip install --force --no-cache-dir --break-system-packages --no-binary=mpi4py mpi4py==$mpi4py
-
